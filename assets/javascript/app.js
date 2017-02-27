@@ -96,17 +96,53 @@ State 3 / Initial            | Display:
 
 //**********   States ends **************
 
-//var rightAnwers: 0;
-//var wrongAnswers: 0;
-//var answers= [];
-//define the function countDown. 
+
+
+
+
+
+//Define the variables. 
+rigthAnswers = 0,
+wrongAnswers =  0,
+realTimer = 0,
 // Display the state 1
+$("#state2, #state3").hide();
+
+
+// define the function countDown that stops at 0 seconds. 
+
+
+myTimer = setInterval(myCountDown, 100);
+var c = 0;
+function myCountDown() {
+    c = ++c;
+    	
+    realTimer = 30 - c; 
+    
+    console.log(realTimer);
+
+    if (realTimer === 0) {
+
+    	clearInterval(myTimer);
+    }
+}
+
+
+
+
+
+
+
+
 // onClick the function countdown will start.
-//Display the trivaleria whcih is state2 . 
+ //$("#start").click(finalTimer);
+
+// Display the trivaleria whcih is state2 . 
 // while countDown >0 this stage continues. 
 // When countdown = 0, 
-// cahnge the variables by capturing the inputs and by comparing them with asnwers, and making the calculations.
+// change the variables by capturing the inputs and by comparing them with asnwers, and making the calculations.
 // Display the state 3. 
+
 
 
 
