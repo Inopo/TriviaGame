@@ -100,17 +100,13 @@ State 3 / Initial            | Display:
 //var wrongAnswers: 0;
 //var answers= [];
 //define the function countDown. 
-
+// Display the state 1
 // onClick the function countdown will start.
-
-
+//Display the trivaleria whcih is state2 . 
 // while countDown >0 this stage continues. 
-
-
 // When countdown = 0, 
-
-
-// Display 
+// cahnge the variables by capturing the inputs and by comparing them with asnwers, and making the calculations.
+// Display the state 3. 
 
 
 
