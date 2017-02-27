@@ -125,7 +125,7 @@ $("#state2, #state3").hide();
 $('#start').on('click', function() {
 
 //This is calling the function myCountDown in the intervals of 100 ms and returning the value to myTimer. 
-myTimer = setInterval(myCountDown, 300);
+myTimer = setInterval(myCountDown, 100);
 // Internal counter
 var c = 0;
 //Define function myCountDown
@@ -137,7 +137,7 @@ function myCountDown() {
     	
     realTimer = 30 - c; 
     
-    console.log(realTimer);
+    $("#displayTimeRemaning").html(realTimer);
 
 
     if (realTimer === 0) {
