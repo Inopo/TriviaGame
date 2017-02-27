@@ -103,6 +103,13 @@ $( document ).ready(function() {
 rigthAnswers = 0,
 wrongAnswers =  0,
 realTimer = 0,
+
+//Answer key is below.
+answerKey = "yes";
+
+
+
+
 // Display the state 1
 $("#state2, #state3").hide();
 
@@ -118,7 +125,7 @@ $("#state2, #state3").hide();
 $('#start').on('click', function() {
 
 //This is calling the function myCountDown in the intervals of 100 ms and returning the value to myTimer. 
-myTimer = setInterval(myCountDown, 100);
+myTimer = setInterval(myCountDown, 300);
 // Internal counter
 var c = 0;
 //Define function myCountDown
@@ -132,17 +139,47 @@ function myCountDown() {
     
     console.log(realTimer);
 
-    
-
-
 
     if (realTimer === 0) {
 
     	clearInterval(myTimer);
 
     	$("#state1, #state2").hide();
+    	
+    	//You need to compare the input with answer key.
+
+ if (answerKey ===  $( "input[type=radio][name=optradio]:checked" ).val() ) {
+
+ 	rigthAnswers = 1;
+
+ 	wrongAnswers =  0;
+ 	}
+
+ 	else {
+
+ 		wrongAnswers = 1;
+
+ 		rigthAnswers = 0;
+
+ 	}
+
+
+
+ 
+
+
+
+
+    	//You need to change the variables according to above findings. 
+
+
+
+
     	//Display state 3
 
+    	$("#displayWrongAnswers").append(wrongAnswers);
+    	$("#displayRightAnswers").append(rigthAnswers);
+    	//Call the function that checks number of rigth and wrong answers. 
     	$("#state3").show();
 
     }
