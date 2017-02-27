@@ -1,5 +1,5 @@
-$( document ).ready(function() {
-    console.log( "ready!" );
+
+    
 
 
 // Problem & Objective: Ask Questions and get answers
@@ -96,9 +96,7 @@ State 3 / Initial            | Display:
 
 //**********   States ends **************
 
-
-
-
+$( document ).ready(function() {
 
 
 //Define the variables. 
@@ -108,13 +106,26 @@ realTimer = 0,
 // Display the state 1
 $("#state2, #state3").hide();
 
+//window.onload = function() {
+
+//};
+  // $("#start").on("click", setInterval);
 
 // define the function countDown that stops at 0 seconds. 
 
 
+
+$('#start').on('click', function() {
+
+//This is calling the function myCountDown in the intervals of 100 ms and returning the value to myTimer. 
 myTimer = setInterval(myCountDown, 100);
+// Internal counter
 var c = 0;
+//Define function myCountDown
 function myCountDown() {
+    $("#state1, #state3").hide();
+    //You need to display the div state 2
+    $("#state2").show();
     c = ++c;
     	
     realTimer = 30 - c; 
@@ -127,15 +138,15 @@ function myCountDown() {
     }
 }
 
-
-
-
-
-
-
+ });
 
 // onClick the function countdown will start.
- //$("#start").click(finalTimer);
+
+
+
+
+
+
 
 // Display the trivaleria whcih is state2 . 
 // while countDown >0 this stage continues. 
