@@ -114,7 +114,7 @@ $("#state2, #state3").hide();
 // define the function countDown that stops at 0 seconds. 
 
 
-
+// onClick the function countdown will start.
 $('#start').on('click', function() {
 
 //This is calling the function myCountDown in the intervals of 100 ms and returning the value to myTimer. 
@@ -132,29 +132,23 @@ function myCountDown() {
     
     console.log(realTimer);
 
+    
+
+
+
     if (realTimer === 0) {
 
     	clearInterval(myTimer);
+
+    	$("#state1, #state2").hide();
+    	//Display state 3
+
+    	$("#state3").show();
+
     }
 }
 
  });
-
-// onClick the function countdown will start.
-
-
-
-
-
-
-
-// Display the trivaleria whcih is state2 . 
-// while countDown >0 this stage continues. 
-// When countdown = 0, 
-// change the variables by capturing the inputs and by comparing them with asnwers, and making the calculations.
-// Display the state 3. 
-
-
 
 
 
