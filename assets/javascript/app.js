@@ -53,10 +53,10 @@ Trivia states  | behaviour
 ---------------------------------------------------
 State 1 / Initial            | Display Start and timer @ 30 sec.
                              | rigthAnswers: 0;
-                             | wrong answers: 0; 
+                             | wrongAnswers: 0; 
                              | funtion() countdown(): not started
-                             | Question an object comes with its answer 
-                             |  questions = []
+                             | 
+                             |  
 
 */
 /*
@@ -96,6 +96,21 @@ State 3 / Initial            | Display:
 
 //**********   States ends **************
 
+//var rightAnwers: 0;
+//var wrongAnswers: 0;
+//var answers= [];
+//define the function countDown. 
+
+// onClick the function countdown will start.
+
+
+// while countDown >0 this stage continues. 
+
+
+// When countdown = 0, 
+
+
+// Display 
 
 
 
