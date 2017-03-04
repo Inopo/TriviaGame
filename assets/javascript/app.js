@@ -1,4 +1,4 @@
-
+    
     
 
 
@@ -105,7 +105,7 @@ wrongAnswers =  0,
 realTimer = 0,
 
 //Answer key is below.
-answerKey = "yes";
+answerKey = ["yes", "no", "yes", "yes"];
 
 
 
@@ -125,7 +125,7 @@ $("#state2, #state3").hide();
 $('#start').on('click', function() {
 
 //This is calling the function myCountDown in the intervals of 100 ms and returning the value to myTimer. 
-myTimer = setInterval(myCountDown, 100);
+myTimer = setInterval(myCountDown, 300);
 // Internal counter
 var c = 0;
 //Define function myCountDown
@@ -133,7 +133,7 @@ function myCountDown() {
     $("#state1, #state3").hide();
     //You need to display the div state 2
     $("#state2").show();
-    c = ++c;
+    c++;
     	
     realTimer = 30 - c; 
     
@@ -148,27 +148,95 @@ function myCountDown() {
     	
     	//You need to compare the input with answer key.
 
- if (answerKey ===  $( "input[type=radio][name=optradio]:checked" ).val() ) {
 
- 	rigthAnswers = 1;
 
- 	wrongAnswers =  0;
+  
+
+      
+var temp = $("input[name=optradio0]:checked").val();
+
+ 
+ if (answerKey[0] ===  temp) {
+    
+
+
+ 	rigthAnswers++;
+
+
  	}
 
  	else {
 
- 		wrongAnswers = 1;
+ 		wrongAnswers++;
+       
 
- 		rigthAnswers = 0;
+	
 
  	}
 
 
+var temp = $("input[name=optradio1]:checked").val();
 
  
+ if (answerKey[1] ===  temp) {
+    
 
 
+    rigthAnswers++;
 
+
+    }
+
+    else {
+
+        wrongAnswers++;
+       
+
+    
+
+    }
+
+
+var temp = $("input[name=optradio2]:checked").val();
+
+ 
+ if (answerKey[2] ===  temp) {
+    
+
+
+    rigthAnswers++;
+
+
+    }
+
+    else {
+
+        wrongAnswers++;
+       
+
+    
+
+    }
+    var temp = $("input[name=optradio3]:checked").val();
+
+ 
+ if (answerKey[3] ===  temp) {
+    
+
+
+    rigthAnswers++;
+
+
+    }
+
+    else {
+
+        wrongAnswers++;
+       
+
+    
+
+    }
 
     	//You need to change the variables according to above findings. 
 

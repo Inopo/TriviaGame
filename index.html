@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,18 +14,30 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700" rel="stylesheet">
+
 <!-- Ege needs to change the custom script location -->
 <head>
 	<title>Ege Ertem _ HW 5</title>
 </head>
+<div id="first_div_visiual">
+<div class="row">
+<div class="col-md-6 col-md-offset-3"> 
+
 <body>
 
-<h1>Wellcome to the final challenge in your journey to save the world.</h1>
+<h1 id="headline1">welcome to the Questinable... </h1>
+<p id="under_headline" > You will not only find all the important questions in life but also the answers that you have been searching for, through your entire life. </p>
+
+
 				
 
 <!-- State 1  -->
+
+
 <div id="state1">
-    <button type="button" id="start" class="btn btn-default">Start</button>
+    <button type="button" id="start" class="btn btn-primary">Start</button>
 
 
 </div>
@@ -34,13 +46,33 @@
 <!-- State 2  -->
 
 <div id="state2">
-	<span> Time Remaining :</span> <span id="displayTimeRemaning" ></span>
+	<span id="time_piece"> Time Remaining :</span> <span id="displayTimeRemaning" ></span>
 
 	<p>Robots can kill human beings according to the zeroth rule of robotics.</p>
 
-	<label class="radio-inline"><input type="radio" name="optradio" value="yes">Yes</label>
-	<label class="radio-inline"><input type="radio" name="optradio" value="no">No</label>
+	<label  class="radio-inline"><input type="radio" name="optradio0" value="yes">Yes</label>
+	<label  class="radio-inline"><input type="radio" name="optradio0" value="no">No</label>
 
+
+	<p>Is <span id="math_expression"> &nbsp; &nbsp;e = mc <span id="to_the_power">&sup3;</span> </span> ? </p>
+
+	<label  class="radio-inline"><input type="radio" name="optradio1" value="yes">Yes</label>
+	<label  class="radio-inline"><input type="radio" name="optradio1" value="no">No</label>
+	
+
+	<p>Was singular university trip cool? </p>
+
+
+
+	<label  class="radio-inline"><input type="radio" name="optradio2" value="yes">Yes</label>
+	<label  class="radio-inline"><input type="radio" name="optradio2" value="no">No</label>
+
+	<p>Is rain good for California?</p>
+
+
+	<label  class="radio-inline"><input type="radio" name="optradio3" value="yes">Yes</label>
+	<label  class="radio-inline"><input type="radio" name="optradio3" value="no">No</label>
+</div
 </div>
 
 <!-- State3 -->
@@ -52,10 +84,12 @@
 </div>
 
 
-
+</div>
+</div>
    
 
     <!-- Script -->
     <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
+</div>
 </html>
